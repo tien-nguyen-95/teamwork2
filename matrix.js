@@ -38,7 +38,8 @@ function TotalRow(arr,col,row,indexRow) {
 }
 function findMax(arr,row,col){
     let max = arr[0][0];
-    let indexi,indexj;
+    let indexi =0
+    let indexj = 0;
     for(let i = 0 ; i < row ; i++ ){
         for( let j=0 ; j < col ; j++ ){
             if ( max < arr[i][j]){
@@ -61,7 +62,7 @@ function sumMargin(arr,row ,col){
         sumBot += arr[col-1][i] ;
     }
     for (let i = 0 ; i < col ; i++){
-        sumLeft += arr[i][0]    
+        sumLeft += arr[i][0];
         sumRight +=arr[i][row-1];
     }
     let sum = sumBot + sumLeft + sumTop + sumRight - arr[0][0] -arr[col-1][0] -arr[0][row-1] -arr[col-1][row-1];
