@@ -57,15 +57,15 @@ function sumMargin(arr,row ,col){
     let sumLeft = 0;
     let sumRight = 0;
     
-    for (let i = 0 ; i<row ; i++){
+    for (let i = 0 ; i<col ; i++){
         sumTop += arr[0][i];
-        sumBot += arr[col-1][i] ;
+        sumBot += arr[row-1][i] ;
     }
-    for (let i = 0 ; i < col ; i++){
+    for (let i = 0 ; i < row ; i++){
         sumLeft += arr[i][0];
-        sumRight +=arr[i][row-1];
+        sumRight +=arr[i][col-1];
     }
-    let sum = sumBot + sumLeft + sumTop + sumRight - arr[0][0] -arr[col-1][0] -arr[0][row-1] -arr[col-1][row-1];
+    let sum = sumBot + sumLeft + sumTop + sumRight - arr[0][0] -arr[row-1][0] -arr[0][col-1] -arr[row-1][col-1];
     return `Total Margin: ${sum} `;
 }
 function findMaxRow(arr,row,col){
